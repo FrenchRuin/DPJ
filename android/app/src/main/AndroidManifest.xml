@@ -1,5 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.toonflix">
+    <queries>
+    <!-- If your app checks for SMS support -->
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+    </intent>
+    <!-- If your app checks for call support -->
+    </queries>
+
     <application
         android:label="toonflix"
         android:name="${applicationName}"
@@ -30,5 +39,9 @@
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
+
+            <!-- Provide required visibility configuration for API level 30 and above -->
+
     </application>
 </manifest>
+
